@@ -15,7 +15,7 @@ void setup()
   // Open Serial Port: Your should change PORT_ID accoading to
   // your own situation. 
   // Please refer to: https://www.processing.org/reference/libraries/serial/Serial.html
-  int PORT_ID =  2;
+  int PORT_ID =  3;
   myPort = new Serial(this, Serial.list()[PORT_ID], BAUD_RATE); 
 
 
@@ -66,14 +66,14 @@ void setup()
   PVector j6 = new PVector(-100, 250, 50);
   PVector vec56 = new PVector(0, 0, -1);
   PVector vec67 = new PVector(1, 0, 0);
-  float theta6 = 55;
+  float theta6 = 10;
   setIK(j6, vec56, vec67, theta6);
   delay(1500);
   //
   j6 = new PVector(0, 250, 150);
   vec56 = new PVector(0, 1, 0);
   vec67 = new PVector(1, 0, 0);
-  theta6 = 10;
+  theta6 = 55;
   setIK(j6, vec56, vec67, theta6);
   delay(1500);
  
@@ -323,4 +323,3 @@ void serialEvent(Serial myPort) {
     }
   }
 }
-
